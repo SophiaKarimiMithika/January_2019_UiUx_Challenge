@@ -1,0 +1,43 @@
+def userName(x):
+#The loop below is for determining whether the selected user name is already taken or not
+  for i in range(0, len(users)): #users is the list containing all users that are signed up
+    if users[i]== x:
+      match = True
+    else:
+      match = False
+
+#The loop below is for requesting the person signing up for a different user name
+  while match == True:
+    print ("Unfortunately this user name exists :( Kindly try another one!")
+    print (userNameRequest)
+
+#This next line allows the user's name to be added to the list of the already signed up users
+  users.append(x)
+  return (x)
+    
+
+def password(x):
+#This function checks the length of the password and ensures that it is equal to or greater than 8
+  while len(x) < 8:
+    print ("Password length must be 8 characters or more") 
+    print (passwordRequest)
+  return (x)
+
+def phoneNumber(x):
+  while len(x) == 13:
+    if x[0]== '+' and x[1]== '2' and x[2]== '5' and x[3]== '4':
+      return (x)
+    else:
+      return print (phoneNumberRequest)
+
+userNameRequest = raw_input("Please enter a user name: ")
+print (userNameRequest) 
+userName(userNameRequest)
+
+phoneNumberRequest = raw_input("Please enter your phone number (Use the format +2547...)")
+print (phoneNumberRequest)
+phoneNumber(phoneNumberRequest)
+
+passwordRequest = raw_input("Please enter a password (There must be a minimum of 8 characters)")
+print (passwordRequest0
+password(passwordRequest)
